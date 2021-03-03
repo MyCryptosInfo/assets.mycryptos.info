@@ -1,0 +1,36 @@
+{
+  "name": "mycryptos-assets",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "description": "MyCryptos · Assets",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.{js,json,md,scss}": "prettier --write",
+    "*.{png,svg}": "imagemin-lint-staged"
+  },
+  "dependencies": {
+    "mycryptos-locations": "github:MyCryptosInfo/locations",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "imagemin-lint-staged": "^0.4.0",
+    "lint-staged": "^10.5.4",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.2.1"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}
