@@ -15,6 +15,7 @@ const fontFilename = {
 
 const imageFilename = {
   favicon: 'favicon.ico',
+  logo192: 'logo192.png',
   logotype: 'logotype.png',
   logotypeWhite: 'logotype-white.png'
 }
@@ -30,6 +31,7 @@ const fontUrl = {
 
 const imageUrl = {
   favicon: () => `${imagesBaseUrl}/${imageFilename.favicon}`,
+  logo192: () => `${imagesBaseUrl}/${imageFilename.logo192}`,
   logotype: () => `${imagesBaseUrl}/${imageFilename.logotype}`,
   logotypeWhite: () => `${imagesBaseUrl}/${imageFilename.logotypeWhite}`
 }
