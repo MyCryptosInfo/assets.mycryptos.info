@@ -2,7 +2,7 @@
   "name": "mycryptos-assets",
   "version": "0.0.0",
   "private": true,
-  "main": "src/index.js",
+  "main": "index.js",
   "description": "MyCryptos · Assets",
   "scripts": {
     "build": "run-p build:*",

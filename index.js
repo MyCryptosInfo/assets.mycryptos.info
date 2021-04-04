@@ -1,16 +1,10 @@
 const { domainName } = require('mycryptos-locations')
 
 const cssBaseUrl = `https://${domainName.assets}/css`
-const fontsBaseUrl = `https://${domainName.assets}/fonts`
 const imagesBaseUrl = `https://${domainName.assets}/images`
 
 const cssFilename = {
   auth: 'auth.css'
-}
-
-const fontFilename = {
-  aldrichFontFace: 'aldrich.css',
-  aldrichFontFile: 'aldrich-regular.ttf'
 }
 
 const imageFilename = {
@@ -24,11 +18,6 @@ const cssUrl = {
   auth: () => `${cssBaseUrl}/${cssFilename.auth}`
 }
 
-const fontUrl = {
-  primaryFontFace: () => `${fontsBaseUrl}/${fontFilename.aldrichFontFace}`,
-  primaryFontFile: () => `${fontsBaseUrl}/${fontFilename.aldrichFontFile}`
-}
-
 const imageUrl = {
   favicon: () => `${imagesBaseUrl}/${imageFilename.favicon}`,
   logo192: () => `${imagesBaseUrl}/${imageFilename.logo192}`,
@@ -38,6 +27,5 @@ const imageUrl = {
 
 module.exports = {
   cssUrl,
-  fontUrl,
   imageUrl
 }
