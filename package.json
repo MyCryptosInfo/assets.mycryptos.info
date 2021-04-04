@@ -9,6 +9,7 @@
     "build:css": "run-p build:css:*",
     "build:css:auth": "sass --load-path=node_modules sass/auth.scss | postcss --use autoprefixer --output=public/css/auth.css",
     "lint-staged": "lint-staged",
+    "standa": "standa --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": {
@@ -24,9 +25,16 @@
     ]
   },
   "lint-staged": {
-    "*.{js,json,md,scss}": "prettier --write",
+    "*.{js}": [
+      "prettier --write",
+      "standa --fix"
+    ],
+    "*.{json,md}": "prettier --write",
     "*.{png,svg}": "imagemin-lint-staged",
-    "*.scss": "stylelint --syntax=scss"
+    "*.scss": [
+      "prettier --write",
+      "stylelint --syntax=scss"
+    ]
   },
   "dependencies": {
     "autoprefixer": "^10.2.4",
@@ -42,6 +50,7 @@
     "lint-staged": "^10.5.4",
     "pre-commit": "^1.2.2",
     "prettier": "^2.2.1",
+    "standa": "^16.1.1",
     "stylelint": "^13.3.3",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-config-standard": "^20.0.0"
